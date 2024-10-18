@@ -1,0 +1,2 @@
+SSID = 'ray-S'
+PASSWORD = 'D751B729AS7'
