@@ -39,7 +39,7 @@ ignore = ignore_files
 # Static URLS
 # GitHub uses 'main' instead of master for python repository trees
 giturl = 'https://github.com/{user}/{repository}'
-call_trees_url = f'https://api.github.com/repos/{user}/{repository}/git/trees/{default_branch}?recursive=1'
+call_trees_url = f'https://api.github.com/repos/{user}/{repository}/git/trees/{default_branch}?recursive=0'
 raw = f'https://raw.githubusercontent.com/{user}/{repository}/master/'
 
 
