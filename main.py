@@ -1,9 +1,7 @@
-from ota import OTAUpdater
-from WIFI_CONFIG import SSID, PASSWORD
+import ugit
 
-# firmware_url = "https://github.com/kevinmcaleer/ota_test/main/"
-firmware_url = "https://github.com/macraj/uPyOTA/blob/master/"
+ugit.backup() # good idea to backup your files!
 
-ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
+ugit.pull_all()
+firmware_url = "https://github.com/macraj/uPyOTA/master/"
 
-ota_updater.download_and_install_update_if_available()
