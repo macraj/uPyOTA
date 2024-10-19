@@ -9,7 +9,7 @@ def main():
     minute = 0
     tick = 0
     led_state = status_led.value()  # Początkowy stan LED
-    led_on_time = 10  # Czas włączenia LED w tickach (1 tick = 0.1 s)
+    led_on_time = 3  # Czas włączenia LED w tickach (1 tick = 0.1 s)
     led_off_time = 10  # Czas wyłączenia LED w tickach (1 tick = 0.1 s)
     led_timer = 0  # Licznik do kontroli czasu migania LED
 
