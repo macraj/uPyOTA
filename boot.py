@@ -1,8 +1,11 @@
-import senko
+import sota
 import machine
 import network
 
-OTA = senko.Senko(
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+
+OTA = sota.Senko(
   user="macraj", repo="upyota", files = ["boot.py", "main.py"]
 )
 
@@ -31,3 +34,4 @@ if OTA.fetch():
     print("A newer version is available!")
 else:
     print("Up to date!")
+OTA = None
