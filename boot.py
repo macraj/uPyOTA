@@ -2,6 +2,8 @@ import sota
 import machine
 import network
 import time
+from machine import Pin
+
 
 status_led = Pin(2, Pin.OUT)
 wlan = network.WLAN(network.STA_IF)
