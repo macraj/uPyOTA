@@ -26,11 +26,11 @@ def sta_connect():
 
 sta_connect()
 
-# if OTA.update():
-#     print("Updated to the latest version! Rebooting...")
-#     machine.reset()
-if OTA.fetch():
-    print("A newer version is available!")
-else:
-    print("Up to date!")
+if OTA.update():
+    print("Updated to the latest version! Rebooting...")
+    machine.reset()
+# if OTA.fetch():
+#     print("A newer version is available!")
+# else:
+#     print("Up to date!")
 OTA = None
