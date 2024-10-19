@@ -1,7 +1,7 @@
 import time
 from machine import Pin
 
-
+from boot import status_led
 
 
 def main():
