@@ -3,6 +3,7 @@ import machine
 import network
 import time
 
+status_led = Pin(2, Pin.OUT)
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 GITHUB_URL = "https://raw.githubusercontent.com/macraj/upyota/master"
@@ -20,7 +21,7 @@ def sta_connect():
                 # print('WLAN timeout!')
                 return False
             time.sleep(0.5)
-            stat_led.value(not stat_led.value())
+            status_led.value(not status_led.value())
         return True
     print('network config:', wlan.ifconfig())
 

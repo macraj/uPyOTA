@@ -1,7 +1,7 @@
 import time
 from machine import Pin
 
-status_led = Pin(2, Pin.OUT)
+
 
 
 def main():
