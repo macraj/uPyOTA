@@ -1,13 +1,12 @@
 import sota
 import machine
 import network
+import time
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
-
-OTA = sota.Senko(
-  user="macraj", repo="upyota", files = ["boot.py", "main.py"]
-)
+GITHUB_URL = "https://raw.githubusercontent.com/macraj/upyota/master"
+OTA = sota.Senko(None, None, url=GITHUB_URL, files=["boot.py", "main.py"])
 
 # Connect to Wi-Fi network.
 def sta_connect():
